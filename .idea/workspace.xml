@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5b562429-f211-4977-9398-66e654bfd474" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1krqAa634XagOvIfZg24Sh7mIIG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b562429-f211-4977-9398-66e654bfd474" name="Default Changelist" comment="" />
+      <created>1606468928261</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606468928261</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="443" y="156" width="620" height="522" key="find.popup" timestamp="1606558318186">
+      <screen x="67" y="27" width="1373" height="783" />
+    </state>
+    <state x="443" y="156" width="620" height="522" key="find.popup/67.27.1373.783@67.27.1373.783" timestamp="1606558318186" />
+    <state x="416" y="131" width="672" height="678" key="search.everywhere.popup" timestamp="1606541578635">
+      <screen x="67" y="27" width="1373" height="783" />
+    </state>
+    <state x="416" y="131" width="672" height="678" key="search.everywhere.popup/67.27.1373.783@67.27.1373.783" timestamp="1606541578635" />
+  </component>
+</project>

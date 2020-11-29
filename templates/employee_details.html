@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<title>Employee Details</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <meta name="google-signin-client_id"
+          content="74762002370-mg6bpr7l55e99v33lsih89cok7i7c07p.apps.googleusercontent.com">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <style>
+            body {background-color:#eee;}
+            .container-fluid {padding:50px;}
+            .container{background-color:white;padding:50px;   }
+            #title{font-family: 'Lobster', cursive;;}
+            .btn-primary{background:#1069A8}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="container">
+        <h2 class="text-center" id="title">Employee Management</h2>
+        <hr>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Home</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/employee/employee-registration/">Employee Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/employee/employee-details/">Employee Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #00008B;">Welcome {{user.first_name}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href='/employee/logout/'>Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Department</th>
+                <th scope="col">City</th>
+                <th scope="col">Edit</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for i in employeeObj %}
+            <tr>
+                <th scope="row">{{i.id}}</th>
+                <td>{{i.first_name}}</td>
+                <td>{{i.last_name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.mobile}}</td>
+                <td>{{i.department}}</td>
+                <td>{{i.city}}</td>
+                <td align="center"><a href="/employee/edit-employee/{{i.id}}"><i class="fas fa-edit"></i></a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</div>
+{% endblock %}
+{% block js_block %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="{% static 'employee/js/employee.js' %}" type="text/javascript"></script>
+{% endblock %}
+</body>
+</html>
