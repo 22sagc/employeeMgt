@@ -37,7 +37,11 @@
 
 {% load static %}
 {% block content %}
-
+<!--<div id="processing" style="display:none;">-->
+<!--    <div id="loading">-->
+<!--        <img src="/media/loading-bars.gif" style="height : 100px;">-->
+<!--    </div>-->
+<!--</div>-->
 {% if user.is_authenticated %}
 <div class="container-fluid">
     <div class="container">
@@ -63,7 +67,7 @@
             </div>
         </nav>
         <hr>
-<!--        <img src='/media/img.jpeg'>-->
+
         <img src="/media/img.jpeg" width="1040px" height="500px"
                                           alt="">
     </div>
@@ -83,34 +87,41 @@
                         <div class="form-group">
                             <input type="text" name="user_name" id="user_name" class="form-control input-lg"
                                    placeholder="User Name">
+                            <label id="user_name_error" class="invalid-feedback"></label>
                         </div>
                         <div class="form-group">
                             <input type="text" name="first_name" id="first_name" class="form-control input-lg"
                                    placeholder="Fisrt Name">
+                            <label id="first_name_error" class="invalid-feedback"></label>
                         </div>
 
                         <div class="form-group">
                             <input type="text" name="last_name" id="last_name" class="form-control input-lg"
                                    placeholder="Last Name">
+                            <label id="last_name_error" class="invalid-feedback"></label>
                         </div>
 
                         <div class="form-group">
                             <input type="email" name="email" id="email" class="form-control input-lg"
                                    placeholder="Email Address">
+                            <label id="email_error" class="invalid-feedback"></label>
                         </div>
 
                         <div class="form-group">
                             <input type="text" name="department" id="department" class="form-control input-lg"
                                    placeholder="Department">
+                            <label id="department_error" class="invalid-feedback"></label>
                         </div>
 
                         <div class="form-group">
                             <input type="password" name="password1" id="password1" class="form-control input-lg"
                                    placeholder="Password">
+                            <label id="password1_error" class="invalid-feedback"></label>
                         </div>
                         <div class="form-group">
                             <input type="password" name="password2" id="password2" class="form-control input-lg"
                                    placeholder="Confirm Password">
+                            <label id="password2_error" class="invalid-feedback"></label>
                         </div>
                         <div>
                             <button type="button" onclick="signup()" class="btn btn-primary">Create Account</button>
@@ -132,10 +143,12 @@
                         <div class="form-group">
                             <input type="text" name="username" id="username" class="form-control input-lg"
                                    placeholder="Username">
+                            <label id="username_error" class="invalid-feedback"></label>
                         </div>
                         <div class="form-group">
                             <input type="password" name="password" id="password" class="form-control input-lg"
                                    placeholder="Password">
+                            <label id="password_error" class="invalid-feedback"></label>
                         </div>
                         <div>
                             <button type="button" onclick="login_c()" class="btn btn-primary" value="Sign In">Sign In

@@ -72,33 +72,39 @@
                             <div class="form-group">
                                 <input type="text" name="first_name" id="first_name" class="form-control input-lg"
                                        placeholder="First Name" value="{{employeeObj.first_name}}">
+                                <label id="firstname_error" class="invalid-feedback"></label>
                             </div>
                             <div class="form-group">
                                 <input type="text" name="last_name" id="last_name" class="form-control input-lg"
                                        placeholder="Last Name" value="{{employeeObj.last_name}}">
+                                <label id="lastname_error" class="invalid-feedback"></label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group">
                                 <input type="email" name="email" id="email" class="form-control input-lg"
-                                       placeholder="Email Address"disabled value="{{employeeObj.email}}">
+                                       placeholder="Email Address" disabled value="{{employeeObj.email}}">
+                                <label id="email_error" class="invalid-feedback"></label>
                             </div>
 
                             <div class="form-group">
                                 <input type="text" name="mobile" id="mobile" class="form-control input-lg"
                                        placeholder="Mobile" maxlength="10" minlength="10"
-                                       value="{{employeeObj.mobile}}">
+                                       value="{{employeeObj.mobile}}" onkeypress="return isNumberKey(event)">
+                                <label id="mobile_error" class="invalid-feedback"></label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group">
                                 <input type="text" name="department" id="department" class="form-control input-lg"
                                        placeholder="Department" value="{{employeeObj.department}}">
+                                <label id="department_error" class="invalid-feedback"></label>
                             </div>
 
                             <div class="form-group">
                                 <input type="text" name="city" id="city" class="form-control input-lg"
                                        placeholder="City" value="{{employeeObj.city}}">
+                                <label id="city_error" class="invalid-feedback"></label>
                             </div>
                         </div>
                         <div class="row justify-content-center">

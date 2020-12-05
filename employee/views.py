@@ -105,11 +105,9 @@ def save_employee(request):
             department = request.POST.get('department')
             mobile = request.POST.get('mobile')
             city = request.POST.get('city')
-            # checking input values are null or not
-            if first_name == '' and last_name == '' and email == '' and department == '' and mobile == '' and city == '':
-                data = {'success': 'null'}
+
             # checking employee is already registered with this email id or not
-            elif Employee.objects.filter(email=email).exists():
+            if Employee.objects.filter(email=email).exists():
                 data = {'success': 'exist'}
             else:
                 # attaching login manager foreign key in employee table
@@ -151,19 +149,13 @@ def update_employee(request):
         if request.method == 'POST':
             first_name = request.POST.get('first_name')
             last_name = request.POST.get('last_name')
-            email = request.POST.get('email')
             department = request.POST.get('department')
             mobile = request.POST.get('mobile')
             city = request.POST.get('city')
             emp_id = request.POST.get('emp_id')
-
-            # checking input values are null or not
-            if first_name == '' and last_name == '' and email == '' and department == '' and mobile == '' and city == '':
-                data = {'success': 'null'}
-            else:
-                Employee.objects.filter(id=emp_id).update(first_name=first_name, last_name=last_name,
-                                                          mobile=mobile, department=department, city=city)
-                data = {'success': 'true'}
+            Employee.objects.filter(id=emp_id).update(first_name=first_name, last_name=last_name,
+                                                      mobile=mobile, department=department, city=city)
+            data = {'success': 'true'}
 
     except Exception:
         data = {'success': 'false'}
