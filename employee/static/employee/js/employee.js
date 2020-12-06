@@ -2,7 +2,7 @@ function signup(){
     if (validateSignupData()) {
         $.ajax({
                 type: 'POST',
-                url: '/employee/register/',
+                url: '/employee/signup/',
                 data:  $('#register').serialize(),
                 success: function(response){
                     if (response.success == 'true'){
@@ -191,7 +191,7 @@ function emp_register_c(){
     if (validateRegisterData()) {
         $.ajax({
                 type: 'POST',
-                url: '/employee/save-employee/',
+                url: '/employee/employee/',
                 data:  $('#emp_register').serialize(),
                 success: function(response){
                     if (response.success == 'true'){

@@ -23,7 +23,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$',views.index, name='landing_page'),
+    path('',views.landing.as_view(), name='landing_page'),
     path('employee/',include(employeeurls)),
 ]
 

@@ -1,17 +1,21 @@
 from django.urls import include, path
-from employee import views
+from employee import views, api
 
 urlpatterns = [
 
-    path('', views.index, name='index'),
-    path('register/', views.register, name='register'),
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
-    path('employee-registration/', views.employee_registration, name='employee_registration'),
-    path('save-employee/', views.save_employee, name='save_employee'),
-    path('employee-details/', views.employee_details, name='employee_details'),
-    path('edit-employee/<id>/', views.edit_employee, name='edit_employee'),
-    path('update-employee/', views.update_employee, name='update_employee'),
+
+    path('saveEmpApi/', api.saveEmp, name='saveEmpApi'),
+    path('showEmpApi/', api.showEmp, name='showEmpApi'),
+    path('saveUserApi/', api.saveUser, name='saveUserApi'),
+    path('saveMangerApi/', api.saveManager, name='saveMangerApi'),
+
+    # class
+    path('employeeDetails/', views.employeeDetails.as_view(), name='employeeDetails'),
+    path('employee/', views.employee.as_view(), name='employee'),
+    path('saveEditEmpApi/<int:pk>', api.saveEmployeeApi.as_view(), name='employee'),
+    path('updateEmployee/<int:pk>', views.updateEmployee.as_view(), name='updateEmployee'),
     path('delete-employee/', views.delete_employee, name='delete_employee'),
 
 ]

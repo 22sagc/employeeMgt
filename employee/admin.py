@@ -5,4 +5,9 @@ class Manager(admin.ModelAdmin):
     list_display = ['id']
     search_fields = ['id']
 
-admin.site.register(models.Employee,Manager)
+class Employee(admin.ModelAdmin):
+    list_display = ['id']
+    search_fields = ['id']
+
+admin.site.register(models.Manager, Manager)
+admin.site.register(models.Employee, Employee)
